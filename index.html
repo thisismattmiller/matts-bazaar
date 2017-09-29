@@ -7,12 +7,12 @@ title: Home
   {% for post in paginator.posts %}
     <a href="{{ post.url | prepend: site.url }}" class="catalogue-item">
       <div>
-        <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time>
-        <h1 class="catalogue-title">{{ post.title }}</h1>
+        <!-- <time datetime="{{ post.date }}" class="catalogue-time">{{ post.date | date: "%B %d, %Y" }}</time> -->
+        <h1 class="catalogue-title">Sometime around {{ post.date | date: "%B %d, %Y" }}</h1>
         <div class="catalogue-line"></div>
 
         <p>
-          {{ post.content | truncatewords: 30 | strip_html }}
+          {{ post.content }}
         </p>
 
       </div>
